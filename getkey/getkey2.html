@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src = "simulate_mouse.js"></script>
+
+</head>
+<body>
+<button id = "body">确认</button>
+<p id = "p">lsdkfjlsdfl</p>
+<script type="text/javascript">
+	var btn = document.getElementById("body");
+	btn.addEventListener("mousedown",function(){
+		alert("success!");
+	})
+	window.addEventListener("keydown",function(event){
+		if(event.ctrlKey == 1){
+			simulate(document.getElementById("body"),"mousedown");
+		}},false);		
+
+
+
+</script>
+</body>
+</html>
