@@ -1,0 +1,187 @@
+body {
+	margin:0px;
+	padding: 0px;
+	background-color: #080e24;
+}
+/*标题*/
+.title {
+	text-align: center;
+}
+.title header {
+	font: 100px '黑体';
+	text-shadow: 5px 5px #32312b;
+	color: #eee5a2;
+}
+.title p {
+	font-size: 24px; 
+	color: #6a695f;
+
+}
+/*Solar System Style*/
+.solarSystem {
+	position: relative;
+	display: inline-block;
+	width: 800px;
+	height: 600px;
+	margin-left: 350px;
+}
+/*轨道*/
+.solarSystem div {
+	position: absolute;
+	border:2px solid #394057;
+	top:0px;right:0px;bottom: 0px; left: 0px;
+	margin:auto;
+	z-index: 2;
+
+}
+.solarSystem div a {
+	text-decoration: none;
+	cursor: pointer;
+	/*color: transparent;*/
+}
+/*星球*/
+.solarSystem div a span {
+	display: block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border:5px solid #467837;
+	border-radius: 5px;
+	z-index: 99;
+}
+/*太阳*/
+.sun {
+	width: 0px;
+	height: 0px;
+	-moz-border-radius: 20px;
+	     border-radius: 20px;
+	border:20px solid gold !important;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 30px #c90;
+	   -moz-box-shadow: 0 0 30px #c90;
+	        box-shadow: 0 0 30px #c90;
+}
+/*水星*/
+.solarSystem .mercury {
+	width: 100px;
+	height: 100px;
+	border-radius: 52px;
+}
+.solarSystem .mercury span {
+	left: 10px;
+	top: 9px;
+	border-color: #b6bac5;
+}
+/*金星*/
+.solarSystem .venus {
+	width: 140px;
+	height: 140px;
+	border-radius: 72px;
+}
+.solarSystem .venus span {
+	left: 130px;
+	top: 95px;
+	border-color: #bf8639;
+}
+/*地球*/
+.solarSystem .earth {
+	width: 180px;
+	height: 180px;
+	border-radius: 92px;
+}
+.solarSystem .earth span {
+	left: 40px;
+	top: 165px;
+	border-color: #06c;
+}
+/*火星*/
+.solarSystem .mars {
+	width: 230px;
+	height: 230px;
+	border-radius: 117px;
+}
+.solarSystem .mars span{
+	left: 60px;
+	top: 5px;
+	border-color: #aa4200;
+}
+.solarSystem .asteroids_meteorids {
+	width: 0px;
+	height: 0px;
+	border: 0px solid transparent !important;
+}
+/*木星*/
+.solarSystem .jupiter {
+	width: 300px;
+	height: 300px;
+	border-radius: 152px;
+}
+.solarSystem .jupiter span {
+	left: 170px;
+	top: -3px;
+	border-color: #e0ae6f;
+}
+/*土星*/
+.solarSystem .saturn {
+	width: 360px;
+	height: 360px;
+	border-radius: 182px;
+}
+.solarSystem .saturn span {
+	left: -4px;
+	top: 200px;
+	border-color: #dfd3a9;
+}
+/*天王星*/
+.solarSystem .uranus {
+	width: 420px;
+	height: 420px;
+	border-radius: 212px;
+}
+.solarSystem .uranus span {
+	left: 285px;
+	top: 400px;
+	border-color: #82b3d1;
+}
+/*海王星*/
+.solarSystem .neptune {
+	width: 470px;
+	height: 470px;
+	border-radius: 237px;
+}
+.solarSystem .neptune span {
+	left: 100px;
+	top: 33px;
+	border-color: #77c2ec;
+}
+/*冥王星*/
+.solarSystem .pluto {
+	width: 530px;
+	height: 530px;
+	border-radius: 267px;
+}
+.solarSystem .pluto span {
+	left: 472px;
+	top:100px;
+	border-color: #7c6a5c;
+}
+
+/*css3 animations*/
+.solarSystem div {
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-name:orbit;
+}
+@keyframes orbit {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+.mercury { animation-duration: 5s; }
+.venus { animation-duration: 8s; }
+.earth { animation-duration: 12s; }
+.mars { animation-duration: 20s; }
+.jupiter { animation-duration: 50s; }
+.saturn { animation-duration: 60s; }
+.uranus { animation-duration: 70s; }
+.neptune { animation-duration: 100s; }
+.pluto { animation-duration: 120s; }
